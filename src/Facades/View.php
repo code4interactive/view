@@ -1,9 +1,9 @@
 <?php
-namespace Code4\ViewElements\Facades;
+namespace Code4\View\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class ViewElements extends Facade
+class View extends Facade
 {
     /**
      * Get the registered name of the component.

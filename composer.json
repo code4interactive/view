@@ -1,9 +1,9 @@
 {
-    "name": "code4/View",
+    "name": "code4interactive/view",
     "description": "Laravel View elements / addons",
     "keywords": [
         "laravel",
-        "viewElements"
+        "view"
     ],
     "homepage": "https://github.com/code4interactive/view",
     "license": "MIT",
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Code4\\ViewElements\\": "src"
+            "Code4\\View\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Code4\\ViewElements\\Test\\": "tests"
+            "Code4\\View\\Test\\": "tests"
         }
     },
     "scripts": {

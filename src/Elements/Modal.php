@@ -1,6 +1,6 @@
 <?php
-namespace Code4\ViewElements\Elements;
-use Code4\ViewElements\PopulateFieldsTrait;
+namespace Code4\View\Elements;
+use Code4\View\PopulateFieldsTrait;
 
 class Modal {
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Code4\ViewElements;
+namespace Code4\View;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
-class ViewElementsServiceProvider extends ServiceProvider {
+class ViewServiceProvider extends ServiceProvider {
 
     public function register() {
         $this->app->singleton('viewElements', function($app) {
@@ -23,7 +23,7 @@ class ViewElementsServiceProvider extends ServiceProvider {
 
     private function registerAliases() {
         $aliasLoader = AliasLoader::getInstance();
-        $aliasLoader->alias('', Facades\ViewElements::class);
+        $aliasLoader->alias('', Facades\View::class);
     }
 
 }

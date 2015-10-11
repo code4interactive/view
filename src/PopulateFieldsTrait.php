@@ -1,5 +1,5 @@
 <?php
-namespace Code4\ViewElements;
+namespace Code4\View;
 
 trait PopulateFieldsTrait
 {
