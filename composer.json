@@ -1,11 +1,11 @@
 {
-    "name": "code4/ViewElements",
+    "name": "code4/View",
     "description": "Laravel View elements / addons",
     "keywords": [
         "laravel",
         "viewElements"
     ],
-    "homepage": "https://github.com/code4interactive/viewElements",
+    "homepage": "https://github.com/code4interactive/view",
     "license": "MIT",
     "authors": [
         {
