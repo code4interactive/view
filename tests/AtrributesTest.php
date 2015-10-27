@@ -57,6 +57,17 @@ class AttributesTest extends \PHPUnit_Framework_TestCase {
         $this->assertEquals('class1 ', $attributes->get('class'));
     }
 
+    public function testHas() {
+        $attributes = new Attributes([
+            'class' => 'class1 class2',
+            'data-target' => '#target',
+            'arrayAttribute' => ['attr1','attr2']
+        ]);
+
+        $this->assertEquals(true, $attributes->has('class'));
+        $this->assertEquals(false, $attributes->has('not'));
+    }
+
     public function testFind() {
         $attributes = new Attributes([
             'class' => 'class1 class2',
