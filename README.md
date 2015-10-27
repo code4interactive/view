@@ -1,6 +1,5 @@
 # Zestaw helperów dla widoków w Laravel 5
 
-[![Software License][ico-license]](LICENSE)
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Circle CI][ico-circle]](https://circleci.com/gh/code4interactive/view/tree/master)
 
@@ -12,7 +11,7 @@ PSRs you support to avoid any confusion with users and contributors.
 Via Composer
 
 ``` bash
-composer require code4interactive/viewElements
+composer require code4interactive/view
 ```
 
 ## Usage
@@ -29,7 +28,7 @@ composer test
 
 ## Credits
 
-- [:author_name][link-author]
+- [Artur Bartczak][link-author]
 - [All Contributors][link-contributors]
 
 ## License
