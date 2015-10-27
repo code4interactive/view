@@ -106,6 +106,35 @@ class Attributes  {
         return $all;
     }
 
+    /**
+     * Sprawdza czy atrybut istnieje
+     * @param $key
+     * @return bool
+     */
+    public function has($key) {
+        return array_key_exists($key, $this->items);
+    }
+
+    /**
+     * Szuka w atrybucie przekazanego stringa (przydatne np. w liście klas css)
+     * @param string $key
+     * @param string $search
+     * @return bool
+     */
+    public function findInKey($key, $search) {
+        if (array_key_exists($key, $this->items))
+        {
+            if (is_array($this->items[$key])) {
+                return array_search($search, $this->items[$key]) === false ? false : true;
+            }
+            if (is_string($this->items[$key])) {
+                return $this->items[$key] == $search;
+            }
+            return false;
+        }
+        return false;
+    }
+
     public function __toString() {
         return $this->all();
     }
