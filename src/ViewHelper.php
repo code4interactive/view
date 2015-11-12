@@ -9,7 +9,7 @@ use Code4\View\Traits\JsTraits;
  * @method static array  successReload() Reload page
  * @method static array  refreshNotifications() Refresh notifications
  */
-class View {
+class ViewHelper {
 
     use JsTraits;
 

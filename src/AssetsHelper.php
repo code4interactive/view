@@ -95,7 +95,7 @@ class AssetsHelper {
      */
     public function getPath($key)
     {
-        list($section, $relativePath, $extension) = $this->namespacedItemResolver->parseKey($key);
+        list(,$relativePath, $extension) = $this->namespacedItemResolver->parseKey($key);
 
         if (array_key_exists($this->env, $this->config['paths'])) {
             $paths = $this->config['paths'][$this->env];

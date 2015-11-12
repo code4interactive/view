@@ -3,7 +3,7 @@ namespace Code4\View\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class View extends Facade
+class ViewHelper extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -12,6 +12,6 @@ class View extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'viewElements';
+        return 'viewHelper';
     }
 }
