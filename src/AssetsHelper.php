@@ -92,6 +92,8 @@ class AssetsHelper {
 
     /**
      * Przeszukuje wszystkie ścieżki w public w poszukiwaniu plików
+     * @param string $key
+     * @return string
      */
     public function getPath($key)
     {
