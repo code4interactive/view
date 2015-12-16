@@ -2,6 +2,8 @@
 namespace Code4\View;
 
 use Code4\View\Traits\JsTraits;
+use Illuminate\Http\Request;
+
 /**
  * @method static array  jsRedirect(\string $redirectUrl) Redirect page
  * @method static array  dismissModal(\string $modalSelector) Close modal
