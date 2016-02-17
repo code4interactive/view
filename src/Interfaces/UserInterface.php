@@ -6,10 +6,20 @@ interface UserInterface {
 
     /**
      * Metada pobierająca ustawienie użytkownika
-     * @param $term
-     * @param $default
+     * @param string $term
+     * @param mixed $default
      * @return mixed
      */
-    public function getSetting($term, $default);
+    public function getSetting($term, $default = '');
+
+    /**
+     * @return string
+     */
+    public function getInitials();
+
+    /**
+     * @return string
+     */
+    public function getEmail();
 
 }

@@ -20,18 +20,19 @@ class ViewHelper {
 
     /**
      * Generuje avatar. Jeżeli ma być użyty gravatar - $text = $email
-     * @param string $text email|initials
+     * @param string $text initials
+     * @param string $email email
      * @param string $size micro|small|medium|large|huge
      * @param string $color color-0|color-1|color-2|color-3|color-4|color-5|color-6|color-7
      * @param string $class use 'reversed' for inverted colors
      * @param bool $gravatar
      * @return string
      */
-    public function avatar($text, $size, $color, $class = '', $gravatar = false) {
+    public function avatar($text, $email, $size, $color, $class = '', $gravatar = false) {
 
         if ($gravatar)
         {
-            $gravatar_src = \Gravatar::src($text, 100);
+            $gravatar_src = \Gravatar::src($email, 100);
             $temp = '<div class="avatar '.$size.' ' . $class . '">';
             $temp .= '<div class="photo">';
             $temp .= '<img src="' . $gravatar_src . '" >';
@@ -49,19 +50,20 @@ class ViewHelper {
 
     }
 
+    /**
+     * Używając interfejsu UserInterface pobieramy dane do generacji awatara
+     * @param UserInterface $user
+     * @param string $size
+     * @param string $class
+     * @return string
+     */
     public function userAvatar(UserInterface $user, $size = 'medium', $class = '') {
-
-        $gravatar = $user->getSetting('useGravatar', true);
-
-        if ($gravatar) {
-            $text = $user->email;
-        } else {
-            $text = substr($user->first_name, 0, 1) . substr($user->last_name, 0, 1);
-        }
-
+        $gravatar = $user->getSetting('useGravatar', '1');
+        $email = $user->getEmail();
+        $initials = $user->getInitials();
         $color = $user->getSetting('userColor', 'color-0');
 
-        return $this->avatar($text, $size, $color, $class, $gravatar);
+        return $this->avatar($initials, $email, $size, $color, $class, $gravatar);
     }
 
 
