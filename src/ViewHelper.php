@@ -58,14 +58,13 @@ class ViewHelper {
      * @return string
      */
     public function userAvatar(UserInterface $user, $size = 'medium', $class = '') {
-        $gravatar = $user->getSetting('useGravatar', '1');
+        $gravatar = $user->getSetting('general_useGravatar', '1');
         $email = $user->getEmail();
         $initials = $user->getInitials();
         $color = $user->getSetting('userColor', 'color-0');
 
         return $this->avatar($initials, $email, $size, $color, $class, $gravatar);
     }
-
 
     /**
      * Tworzy i zwraca nowy obiekt modal
@@ -83,6 +82,4 @@ class ViewHelper {
             }
         }
     }
-
-
 }
